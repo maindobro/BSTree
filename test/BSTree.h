@@ -37,48 +37,10 @@ public:
 			fillvector(list, node->right);
 		}
 	}
-	// Не могу задать возвращаемое значение, при котором тесты не выдают ошибку
-	/*std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<int>>> begin() { return list_.begin(); };
-	std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<int>>> end() { return list_.end(); };
-	decltype(auto) begin() { return list_.begin(); }; 
-	decltype(auto) end() { return list_.end(); };*/ 
 private:
 	std::vector<T> list_;
 };
-/**template <typename T>
-class Iterator2 { 
-public:
-	void fillvector2(std::vector<Node<T>*> & list, Node<T> * node)
-	{
-		if (node->left)
-		{
-			fillvector2(list, node->left);
-		}
-		list.push_back(node);
-		if (node->right)
-		{
-			fillvector2(list, node->right);
-		}
-	}
-	Iterator2<T>(Node<T>* node) { fillvector2(list_, node); }
-	Node<T>& operator=(const Node<T>& other) 
-	{
-		if (this == &right)
-		{
-			return *this;
-		}
-		key = other.key;
-		right = other.right;
-		left = other.left;
-		parent = other.parent;
-		return *this;
-	}
-	decltype(auto) begin() { return list_.begin(); };
-	decltype(auto) end() { return list_.end(); };
-private:
-	std::vector<Node<T>*> list_;
-};
-*/
+
 template <class T>
 struct Node
 {
